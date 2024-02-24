@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var isFlipped = false;
+      $('.card').click(function () {
+      isFlipped = !isFlipped;
+      $(this).toggleClass('flipped', isFlipped);
+      $('.card').stop().animate({
+          top: '-200px'
+        }, 'slow');
+        $('.hearts').animate({
+        top: '-120px'
+      }, 'slow');
+    });
+
+      $('.container').mouseenter(function () {
+        $('.hearts').animate({
+        top: '-40px'
+      }, 'slow');
+        $('.card').stop().animate({
+          top: '-90px'
+        }, 'slow');
+       
+      }).mouseleave(function () {
+        $('.hearts').animate({
+        top: 0
+      }, 'slow');
+        $('.card').stop().animate({
+          top: 0
+        }, 'slow');
+      });
+   
+    });
+
+    
+  </script>
+  <title>สุขสันต์วันเกิดค่ะคุณพ๊อ</title>
+</head>
+<body>
+  <div class="container"> 
+   
+
+    <div class="valentines">
+      <div class="hearts">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+      </div> 
+      <div class="envelope"></div>
+      <div class="front"></div>
+      <div class="card">
+        <div class="thefront">Happy</br>Birth Day</br> Dad!</br>
+        <div class="heart"></div>
+        </div>
+        <div class="theback">สุขสันต์วันเกิดค่ะคุณพ๊อ</br> ขอให้สุขภาพร่างกายแข็งแรง 
+        </br> แล้วก็ขอให้มีความสุขหลายๆเด้อค่า </br>  ขอบคุณที่ดูแลหล่าเด้อ </br> หนูรักพ่อนะค้า</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="shadow"></div>
+</body>
+</html>
